@@ -18,7 +18,7 @@ const flour = require('../images/grains/flour.png');
 const rice = require('../images/grains/rice.png');
 const pasta = require('../images/grains/pasta.png');
 const bread = require('../images/grains/bread.png');
-const watermelon = require('../images/fruits-watermelon.gif');
+const watermelon = require('../images/watermelon.gif');
 
 
 export { carrot, onion, tomato, potato, milk, yogurt, cheese, eggs, apple, pear, orange, banana, pork, chicken, beef, fish, flour, rice, pasta, bread, watermelon }
