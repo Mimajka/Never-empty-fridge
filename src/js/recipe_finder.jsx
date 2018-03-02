@@ -104,13 +104,11 @@ export default class RecipesFinder extends React.Component {
         fetch(`https://api.edamam.com/search?q=${query}&app_id=d6057d60&app_key=1a924c59cc7e6bb909081cb2bfaca895&from=0&to=100`)
             .then(r => r.json())
             .then(r => {
-                console.log(r);
                 this.setState({
                     error: ''
                 });
                 let index = 0;
                 r.count < 100 ? index = Math.floor(Math.random() * r.count) : index = Math.floor(Math.random() * 100);
-                console.log(index);
                 this.setState({
                     pending: false,
                     label: r.hits[index].recipe.label,
@@ -138,10 +136,8 @@ export default class RecipesFinder extends React.Component {
         fetch(`https://api.edamam.com/search?q=${query}&app_id=d6057d60&app_key=1a924c59cc7e6bb909081cb2bfaca895&from=0&to=100`)
             .then(r => r.json())
             .then(r => {
-                console.log(r);
                 let index = 0;
                 r.count < 100 ? index = Math.floor(Math.random() * r.count) : index = Math.floor(Math.random() * 100);
-                console.log(index);
                 this.setState({
                     pending: false,
                     label: r.hits[index].recipe.label,
@@ -169,7 +165,6 @@ export default class RecipesFinder extends React.Component {
 
     flip = (e)=> {
         e.currentTarget.parentElement.parentElement.parentElement.classList.toggle("flipped");
-        console.log(e.currentTarget.parentElement.parentElement);
     };
 
 
